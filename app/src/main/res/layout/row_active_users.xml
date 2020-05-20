@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:padding="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="users"
+        android:textSize="18sp"
+        android:id="@+id/user_name"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/ter"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="online"
+        android:textSize="16sp"
+        android:padding="5dp"
+        android:id="@+id/status"
+        android:textColor="@color/green"
+        android:fontFamily="@font/ter"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/typing"
+        android:textColor="@color/blue"
+        android:padding="5dp"
+        android:fontFamily="@font/ter"/>
+
+
+</LinearLayout>
