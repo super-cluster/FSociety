@@ -303,30 +303,31 @@ public class ChatActivity extends AppCompatActivity {
             checkTypingStatus("none");
             firebaseAuth.signOut();
             checkUser();
-        }else if(messsage.equals("sudo active-users")){
+        }else if(messsage.equals("sudo active-users")) {
             hideKeyBoard(v);
-            startActivity(new Intent(ChatActivity.this,ActiveUser.class));
+            startActivity(new Intent(ChatActivity.this, ActiveUser.class));
             editText.setText("");
+        }
 
 
-        }else if(messsage.equals("sudo backgroundColor:red")||messsage.equals("sudo backgroundColor:white")){
-            if(messsage.equals("sudo backgroundColor:red")){
-            constraintLayout.setBackgroundColor(getResources().getColor(R.color.Red));
-            DatabaseReference ref=FirebaseDatabase.getInstance().getReference("Users");
-            HashMap<String,Object> h=new HashMap<>();
-            color=getResources().getColor(R.color.Red);
-            h.put("bgColor",color);
-            ref.child(user.getUid()).updateChildren(h);
-            }
-            else if(messsage.equals("sudo backgroundColor:white")){
-                constraintLayout.setBackgroundColor(getResources().getColor(R.color.White));
-                DatabaseReference ref=FirebaseDatabase.getInstance().getReference("Users");
-                HashMap<String,Object> h=new HashMap<>();
-                color=getResources().getColor(R.color.White);
-                h.put("bgColor",color);
-                ref.child(user.getUid()).updateChildren(h);
-            }
-            }
+//        }else if(messsage.equals("sudo backgroundColor:red")||messsage.equals("sudo backgroundColor:white")){
+//            if(messsage.equals("sudo backgroundColor:red")){
+//            constraintLayout.setBackgroundColor(getResources().getColor(R.color.Red));
+//            DatabaseReference ref=FirebaseDatabase.getInstance().getReference("Users");
+//            HashMap<String,Object> h=new HashMap<>();
+//            color=getResources().getColor(R.color.Red);
+//            h.put("bgColor",color);
+//            ref.child(user.getUid()).updateChildren(h);
+//            }
+//            else if(messsage.equals("sudo backgroundColor:white")){
+//                constraintLayout.setBackgroundColor(getResources().getColor(R.color.White));
+//                DatabaseReference ref=FirebaseDatabase.getInstance().getReference("Users");
+//                HashMap<String,Object> h=new HashMap<>();
+//                color=getResources().getColor(R.color.White);
+//                h.put("bgColor",color);
+//                ref.child(user.getUid()).updateChildren(h);
+//            }
+//            }
 
         else {
             imageButton.setEnabled(true);

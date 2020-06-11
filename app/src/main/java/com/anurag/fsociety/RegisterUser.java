@@ -71,8 +71,6 @@ public class RegisterUser extends AppCompatActivity {
                     Toast.makeText(RegisterUser.this, "Enter the Password", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.INVISIBLE);
                 }else {
-
-
                     DatabaseReference reference=FirebaseDatabase.getInstance().getReference("Users");
                     reference.addValueEventListener(new ValueEventListener() {
                         @Override
